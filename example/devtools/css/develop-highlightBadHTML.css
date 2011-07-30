@@ -1,0 +1,6 @@
+﻿*.containerMain a[href="#TODO"],
+*.containerMain a[href=""],
+*.containerMain font,
+*.containerMain center {
+	outline: 1px dotted #f0f;
+}

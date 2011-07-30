@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	
+	<link type="text/css" rel="stylesheet" media="all" href="example.css" />
+</head>
+<body>
+	<div id="DesignTester">
+		<h1>Estate Developer Tools demo</h1>
+		
+		<p>
+			On this page you can test the Estate Developer Tools. Not sure how to use it? <a href="http://www.thebrightlines.com/2010/12/16/estate-developer-tools/">Read and see about this tool</a>.
+		</p>
+		
+		<fieldset>
+			<strong>Standard form fields</strong><br />
+			<input type="text" name="text1" /> Text<br />
+			<input type="password" name="password1" /> Password<br />
+			<input type="file" name="file" /> Upload <small>(no autofill because of security)</small><br />
+			
+			<select name="select1">
+				<option value="op1">option1</option>
+				<option value="op2">option2</option>
+				<option value="op3">option3</option>
+			</select>
+			<br />
+			<input type="radio" name="radiogroup1" value="lorem" />
+			<input type="radio" name="radiogroup1" value="ipsum" />
+			<input type="radio" name="radiogroup1" value="dolor" />
+			<br />
+			<input type="checkbox" name="radiogroup1" value="lorem" />
+			<input type="checkbox" name="radiogroup1" value="ipsum" />
+			<input type="checkbox" name="radiogroup1" value="dolor" />
+			<br />
+			<textarea></textarea>
+			
+			<br /><br />
+			
+			<strong>HTML5 form fields (may be parsed as a simple input field)</strong><br />
+			<input type="email" name="email" /> E-mail<br />
+			<input type="url" name="url" /> Homepage<br />
+			<input type="number" name="points" min="100" max="800" /> Points<br />
+			<input type="range" name="points" min="-100" max="100" /> Range<br />
+			<input type="search" name="search" /> Search<br />
+			<input type="date" name="date" /> Date<br />
+			<input type="month" name="month" /> Month<br />
+			<input type="week" name="week" /> Week<br />
+			<input type="time" name="time" /> Time<br />
+			<input type="datetime" name="datetime" /> Datetime<br />
+			<input type="datetime-local" name="datetime_local" /> Datetime-local<br />
+		</fieldset>
+	</div>
+
+	<!-- Start Estate Developer Tools  -->
+	<!--<script type="text/javascript" src="devtools/javascript/estate-devtools.js"></script>-->
+	<script type="text/javascript" src="devtools/javascript/estate.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.FormTester.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.DesignTester.js"></script>
+    <script type="text/javascript">
+		/* <![CDATA[ */
+		Estate.Events.AddEvent(window, Estate.Develop.ToggleVisibility.Init, "onload")
+		Estate.Events.AddEvent(window, Estate.Develop.ReloadCSS.Init, "onload")
+		Estate.Events.AddEvent(window, Estate.Develop.FormTester.Init, "onload")
+		Estate.Events.AddEvent(
+			window,
+			function() {
+				Estate.Develop.DesignTester.Init({
+					designAnchor: document.getElementById('DesignTester'),
+					xOffset: 0,
+					yOffset: 0
+				})
+			},
+			"onload"
+		)
+		Estate.Events.AddEvent(window, Estate.Develop.ExtraMenuItem.Init, "onload")
+		/* ]]> */
+	</script>
+	<!-- End Estate Developer Tools  -->
+	
+    <script type="text/javascript">
+		/* <![CDATA[ */
+		var test2 = "Lorem ipsum"
+		var test = new String("lorem ipsum")
+		dlog(typeof(test))
+		dlog(typeof(test2))
+		dlog(test.constructor)
+		dlog(test2.constructor)
+		/* ]]> */
+	</script>
+</body>
+</html>

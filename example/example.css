@@ -1,0 +1,91 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0
+}
+html {
+	height:100%;
+	overflow:-moz-scrollbars-vertical;
+	overflow-x:auto
+}
+table {
+	border:0;
+	border-collapse:collapse;
+	border-spacing:0
+}
+fieldset,img {
+	border:0
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal
+}
+em,cite {
+	font-style:italic
+}
+strong {
+	font-weight:bold
+}
+ol,ul {
+	list-style:none
+}
+caption,th {
+	text-align:left
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+	margin:0;
+	padding:0
+}
+q:before,q:after {
+	content:''
+}
+abbr,acronym {
+	border:0
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background: url(images/4.jpg) #dddddd no-repeat center center;
+}
+
+#DesignTester {
+	margin: 0 auto 0 auto;
+	width: 500px;
+	height: 100%;
+	padding: 10px 20px;
+	border-left: 1px solid #e7e7f0;
+	border-right: 1px solid #e7e7f0;
+	background: #d4d5e3;
+	background: rgba(212, 213, 227, 0.7)
+}
+
+h1 {
+	margin-bottom: 10px;
+	font-size: 1.6em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.3em;
+	padding: 10px 0;
+}
+
+fieldset {
+	margin-top: 1em;
+}
+
+textarea {
+	width: 75%;
+	height: 10em;
+}
+
+small {
+	font-size: 0.9em;
+}

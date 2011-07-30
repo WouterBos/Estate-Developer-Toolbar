@@ -1,0 +1,232 @@
+a {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic
+}
+
+a[rel="nofollow"]:after {
+	content: " [nofollow]";
+	color: #860000;
+}
+
+
+
+iframe:before {
+	content: "[IFRAME: "
+}
+iframe:after {
+	content: "]"
+}
+
+noscript:before {
+	content: "[NOSCRIPT: "
+}
+noscript:after {
+	content: "]"
+}
+
+noframes:before {
+	content: "[NOFRAMES: "
+}
+noframes:after {
+	content: "]"
+}
+
+caption:before {
+	content: "[CAPTION: "
+}
+caption:after {
+	content: "]"
+}
+
+table td,
+table th,
+table caption {
+	border: 1px dotted #CCCCCC;
+}
+
+
+
+/* Start headers */
+h1:before {
+	content: "[H1: "
+}
+h1:after {
+	content: "]"
+}
+
+h2:before {
+	content: "[H2: "
+}
+h2:after {
+	content: "]"
+}
+
+h3:before {
+	content: "[H3: "
+}
+h3:after {
+	content: "]"
+}
+
+h4:before {
+	content: "[H4: "
+}
+h4:after {
+	content: "]"
+}
+
+h5:before {
+	content: "[H5: "
+}
+h5:after {
+	content: "]"
+}
+
+h6:before {
+	content: "[H6: "
+}
+h6:after {
+	content: "]"
+}
+/* End headers */
+
+
+
+/* Start HTML 5 */
+section:before,
+nav:before,
+article:before,
+aside:before,
+hgroup:before,
+header:before,
+footer:before,
+time:before,
+mark:before {
+	display: block;
+	color: rgba(0, 0, 0, 0.7);
+	content: "Aside: ";
+}
+
+section:before {
+	content: "Section: "
+}
+section {
+	display: block;
+	outline: 2px solid rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+nav:before {
+	content: "Nav: ";
+}
+nav {
+	display: block;
+	outline: 2px solid rgba(255, 255, 0, 0.8);
+	background: rgba(255, 255, 0, 0.2);
+}
+
+article:before {
+	content: "Article: ";
+}
+article {
+	display: block;
+	outline: 2px solid rgba(138, 0, 255, 0.8);
+	background: rgba(138, 0, 255, 0.2);
+}
+
+aside:before {
+	content: "Aside: ";
+}
+aside {
+	display: block;
+	outline: 2px solid rgba(0, 22, 255, 0.8);
+	background: rgba(0, 22, 255, 0.2)
+}
+
+hgroup:before {
+	content: "Hgroup: ";
+}
+hgroup {
+	display: block;
+	outline: 2px solid rgba(255, 114, 0, 0.8);
+	background: rgba(255, 114, 0, 0.2)
+}
+
+header:before {
+	content: "Header: ";
+}
+header {
+	display: block;
+	outline: 2px solid rgba(255, 114, 0, 0.8);
+	background: rgba(255, 114, 0, 0.2)
+}
+
+header:before {
+	content: "Footer: ";
+}
+footer {
+	display: block;
+	outline: 2px solid rgba(0, 246, 255, 0.8);
+	background: rgba(0, 246, 255, 0.2)
+}
+
+time:before {
+	display: inline;
+	content: "Time: ";
+}
+time {
+	display: inline;
+	outline: 2px solid rgba(30, 255, 0, 0.8);
+	background: rgba(30, 255, 0, 0.2);
+}
+
+mark:before {
+	display: inline;
+	content: "Mark: ";
+}
+mark {
+	display: inline;
+	outline: 2px solid rgba(255, 0, 0, 0.8);
+	background: rgba(255, 0, 0, 0.2);
+}
+/* End HTML 5 */
+
+
+
+
+/* Start Columns */
+body.columns2 {
+	-moz-column-count: 2;
+	-moz-column-gap: 4%;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 4%;
+	column-count: 2;
+	column-gap: 4%;
+}
+
+body.columns3 {
+	-moz-column-count: 3;
+	-moz-column-gap: 4%;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 4%;
+	column-count: 3;
+	column-gap: 4%;
+}
+
+body.columns4 {
+	-moz-column-count: 4;
+	-moz-column-gap: 4%;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 4%;
+	column-count: 4;
+	column-gap: 4%;
+}
+/* End Columns */

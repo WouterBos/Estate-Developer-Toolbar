@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Estate Developer Tools demo</title>
+	
+	<link rel="stylesheet" media="all" href="example.css" />
+	<meta name="DesignTesterFile" content="index.png" />
+</head>
+<body class=" Homepage">
+	<div id="DesignTester">
+		<article>
+			<h1>Estate Developer Tools demo</h1>
+			
+			<p>
+				On this page you can test the Estate Developer Tools. <mark>Not sure how to use it? <a href="http://www.thebrightlines.com/2010/12/16/estate-developer-tools/">Read about this tool and view the video demo</a></mark>.
+			</p>
+		</article>
+		
+		<section>
+			<fieldset>
+				<strong>Standard form fields</strong><br />
+				<input type="text" name="text1" /> Text<br />
+				<input type="password" name="password1" /> Password<br />
+				<input type="file" name="file" /> Upload <small>(no autofill because of security)</small><br />
+				
+				<select name="select1">
+					<option value="op1">option1</option>
+					<option value="op2">option2</option>
+					<option value="op3">option3</option>
+				</select>
+				<br />
+				<input type="radio" name="radiogroup1" value="lorem" />
+				<input type="radio" name="radiogroup1" value="ipsum" />
+				<input type="radio" name="radiogroup1" value="dolor" />
+				<br />
+				<input type="checkbox" name="radiogroup1" value="lorem" />
+				<input type="checkbox" name="radiogroup1" value="ipsum" />
+				<input type="checkbox" name="radiogroup1" value="dolor" />
+				<br />
+				<textarea></textarea>
+				
+				<br /><br />
+				
+				<strong>HTML5 form fields (may be parsed as a simple input field)</strong><br />
+				<input type="email" name="email" /> E-mail<br />
+				<input type="url" name="url" /> Homepage<br />
+				<input type="number" name="points" min="100" max="800" /> Points<br />
+				<input type="range" name="points" min="-100" max="100" /> Range<br />
+				<input type="search" name="search" /> Search<br />
+				<input type="date" name="date" /> Date<br />
+				<input type="month" name="month" /> Month<br />
+				<input type="week" name="week" /> Week<br />
+				<input type="time" name="time" /> Time<br />
+				<input type="datetime" name="datetime" /> Datetime<br />
+				<input type="datetime-local" name="datetime_local" /> Datetime-local<br />
+			</fieldset>
+		</section>
+	</div>
+
+	<!-- Start Estate Developer Tools  -->
+	<script type="text/javascript" src="devtools/javascript/Estate.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.FormTester.js"></script>
+	<script type="text/javascript" src="devtools/javascript/Estate.Develop.DesignTester.js"></script>
+    <script type="text/javascript">
+		/* <![CDATA[ */
+    	var oTimer = new Estate.Develop.Timer('foo')
+    	oTimer.Start()
+
+    	Estate.Events.AddEvent(window, Estate.Develop.ToggleVisibility.Init, "onload")
+		Estate.Events.AddEvent(window, Estate.Develop.ReloadCSS.Init, "onload")
+		Estate.Events.AddEvent(window, function() { Estate.Develop.Validate.Init('validator.w3.org') }, "onload")
+		Estate.Events.AddEvent(window, function() { Estate.Develop.Structure.Init({ useColumns: true, columnSize: 700 }) }, "onload")
+		Estate.Events.AddEvent(window, Estate.Develop.FormTester.Init, "onload")
+		Estate.Events.AddEvent(
+			window,
+			function() {
+				Estate.Develop.DesignTester.Init({
+					designAnchor: document.getElementById('DesignTester'),
+					xOffset: -30,
+					yOffset: 0,
+					getImageUrl: function() {
+						var className = ""
+						var metatags = document.getElementsByTagName('meta')
+						
+						
+						for (var i = 0; i < metatags.length; i++) {
+							if (metatags[i].name == "DesignTesterFile") {
+								return metatags[i].content
+							}
+						}
+						
+						if (document.getElementsByTagName('body')[0].className) {
+							className = document.getElementsByTagName('body')[0].className
+						}
+						if (className.indexOf('Homepage') >= 0) {
+							return "1.jpg"
+						}
+						if (className.indexOf('News') >= 0) {
+							return "2.jpg"
+						}
+						return ""
+					}
+				})
+			},
+			"onload"
+		)
+		
+		var result = oTimer.End(true)
+		/* ]]> */
+	</script>
+	<!-- End Estate Developer Tools  -->
+</body>
+</html>

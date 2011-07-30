@@ -1,0 +1,418 @@
+﻿/*
+ * TABLE OF CONTENTS:
+ * - Browser reset
+ * - Global styles
+ * - Tracebox
+ * - Menu
+ * - Design tester
+ */
+
+
+
+/*
+ * Start browser reset 
+ */
+
+#dev_root div,
+#dev_root p,
+#dev_root input {
+	margin:0;
+	padding:0
+}
+#dev_root em,
+#dev_root strong,
+#dev_root th {
+	font-style:normal;
+	font-weight:normal
+}
+#dev_root em {
+	font-style:italic
+}
+#dev_root strong {
+	font-weight:bold
+}
+#dev_root ol,
+#dev_root ul {
+	list-style:none
+}
+#dev_root table {
+	border:0;
+	border-collapse:collapse;
+	border-spacing:0
+}
+#dev_root img {
+	border:0
+}
+
+/*
+ * End browser reset 
+ */
+
+		
+
+/*
+ * Start global styles
+ */
+
+#dev_root * {
+	font-size: 10px;
+	line-height: 0.9;
+	color: #000000;
+	font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+/*
+ * End global styles
+ */
+
+
+
+/*
+ * Start tracebox
+ */
+
+#dev_root div.traceBox {
+	position: fixed;
+	z-index: 2000000000;
+	top: 0;
+	left: 0;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	max-width: 40%;
+	font-size: 11px;
+	color: #000;
+	-moz-box-shadow: 0px 0px 15px #000000;
+	-webkit-box-shadow: 0px 0px 15px #000000;
+	box-shadow: 0px 0px 15px #000000;
+}
+#dev_root*.ua_msie6 div.traceBox {
+	position: absolute;
+}
+
+#dev_root div.traceBox div.traceBox_content {
+	position: relative;
+	z-index: 1;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	max-height: 300px;
+	padding-right: 20px;
+	overflow: auto;
+	white-space: nowrap;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.7);
+}
+#dev_root div.traceBox:hover div.traceBox_content {
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+#dev_root div.traceBox div.traceBox_content span {
+	display: block;
+	padding: 5px 5px 5px 15px;
+	text-indent: -10px;
+	white-space: pre-line;
+}
+
+#dev_root div.traceBox div.traceBox_toggle {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: -17px;
+	display: block;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border: 1px outset #cccccc;
+	width: 12px;
+	height: 12px;
+	padding-right: 2px;
+	line-height: 8px;
+	font-size: 18px;
+	text-align: center;
+	background: #cccccc;
+	-moz-box-shadow: 0px 0px 15px #000000;
+	-webkit-box-shadow: 0px 0px 15px #000000;
+	box-shadow: 0px 0px 15px #000000;
+}
+
+#dev_root div.traceBox.traceBox_hidden {
+	width: 0;
+	border: none;
+}
+
+#dev_root div.traceBox.traceBox_hidden div.traceBox_content {
+	display: none;
+}
+
+/*
+ * End tracebox
+ */
+
+
+
+/*
+ * Start menu
+ */
+
+#dev_root div.dev_menuContainer {
+	position: fixed;
+	z-index: 2000000010;
+	right: -1px;
+	top: -51px;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+	-moz-border-radius-bottomleft: 19px;
+	-webkit-border-bottom-left-radius: 19px;
+	border-bottom-left-radius: 19px;
+	border: 1px solid #000000;
+	height: 19px; 
+	padding: 50px 0 0 40px;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.7);
+	-moz-box-shadow: 0px 0px 15px #000000;
+	-webkit-box-shadow: 0px 0px 15px #000000;
+	box-shadow: 0px 0px 15px #000000;
+}
+#dev_root.ua_msie6 div.dev_menu {
+	position: absolute;
+}
+#dev_root div.dev_menu:hover {
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+#dev_root div.dev_menuContainer.inactive div.dev_menu {
+	width: 0 !important;
+}
+
+#dev_root div.dev_menuContainer.active div.dev_menu {
+	width: inherit !important;
+}
+
+#dev_root div.dev_menu a.dev_logo {
+	opacity: 0.85;
+	position: absolute;
+	left: 11px;
+	display: block;
+	margin-top: 1px;
+	width: 20px;
+	height: 18px;
+	overflow: hidden;
+	text-indent: -9999em;
+	background: url(../sprite.png) -100px 0 no-repeat;
+}
+#dev_root div.dev_menu a.dev_logo:hover {
+	opacity: 1;
+}
+
+#dev_root div.dev_menu div.dev_buttons {
+	display: none;
+}
+#dev_root div.dev_menuContainer.active div.dev_buttons {
+	display: block;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button {
+	cursor: pointer;
+	float: right;
+	position: relative;
+	border-left: 1px solid #999999;
+	padding: 5px 5px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button:last-child {
+	border-left-width: 0;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button::selection {
+	color: #000000;
+}
+#dev_root div.dev_menu div.dev_buttons div.dev_button::-moz-selection {
+	color: #000000;
+}
+#dev_root div.dev_menu div.dev_buttons div.dev_button::-webkit-selection {
+	color: #000000;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button:hover {
+	z-index:1000;
+	overflow: visible;
+	background: #ffffff;
+	border-color: #666666 !important;
+	-moz-box-shadow: 0px 0px 5px #000000;
+	-webkit-box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 5px #000000;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button.close {
+	height: 9px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 7px;
+}
+
+#dev_root div.dev_menu div.dev_buttons div.dev_button div.dev_tooltip {
+	opacity: 0;
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	border: 1px solid #333333;
+	padding: 4px;
+	color: #000000;
+	font-size: 9px;
+	font-family: Arial, Sans-serif;
+	white-space: nowrap;
+	background: #FFF9BD;
+	-moz-transition: opacity 0.05s ease-out;
+	-o-transition: opacity 0.05s ease-out;
+	-webkit-transition: opacity 0.05s ease-out;
+	transition: opacity 0.05s ease-out;
+}
+#dev_root div.dev_menu div.dev_buttons div.dev_button:hover div.dev_tooltip {
+	opacity: 1;
+	-moz-transition: opacity 0.8s ease-in;
+	-o-transition: opacity 0.8s ease-in;
+	-webkit-transition: opacity 0.8s ease-in;
+	transition: opacity 0.8s ease-in;
+}
+#dev_root div.dev_menu div.dev_buttons div.dev_button:first-child div.dev_tooltip {
+	left: auto;
+	right: 0;
+}
+
+/*
+ * End menu
+ */
+
+
+
+/*
+ * Start design tester 
+ */
+
+#dev_root img.dev_design {
+	cursor: move;
+	display: none;
+	position: absolute;
+	z-index: 2000000005;
+	opacity:.5;
+	filter: alpha(opacity=50);
+	outline: 1px dotted #000000;
+	width: auto;
+	height: auto;
+}
+
+#dev_root div.dev_measureBox {
+	display: none;
+	position: fixed;
+	z-index: 2000000006;
+	right: 0;
+	top: 32px;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 1px  solid #333333;
+	border-right: 0;
+	width: 70px;
+	padding: 7px;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.7);
+	-moz-box-shadow: 0px 0px 15px #000000;
+	-webkit-box-shadow: 0px 0px 15px #000000;
+	box-shadow: 0px 0px 15px #000000;
+}
+#dev_root.ua_msie6 div.dev_measureBox {
+	position: absolute;
+}
+#dev_root div.dev_measureBox:hover {
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+#dev_root div.dev_measureBox div.dev_axis {
+	min-height: 0;
+}
+#dev_root div.dev_measureBox div.dev_axis:after {
+	content: "";
+	width: 100%;
+	clear: both;
+	display: block;
+}
+
+#dev_root div.dev_measureBox div.dev_axis div.dev_label {
+	float: left;
+	width: 15px;
+	height: 15px;
+}
+
+#dev_root div.dev_measureBox div.dev_axisX div.dev_label {
+	background: url(../sprite.png) -46px 5px no-repeat;
+}
+
+#dev_root div.dev_measureBox div.dev_axisY div.dev_label {
+	background: url(../sprite.png) 6px 2px no-repeat;
+}
+
+#dev_root div.dev_measureBox div.dev_axis input {
+	float: left;
+	border-width: 1px;
+	width: 51px;
+}
+
+#dev_root div.dev_measureBox input.dev_measureReset,
+#dev_root div.dev_measureBox input.dev_measureReposition,
+#dev_root div.dev_measureBox input.dev_setDesignImage {
+	cursor: pointer;
+	margin-top: 2px;
+	border-width: 1px;
+	padding: 0;
+	width: 100%;
+}
+
+#dev_root div.dev_measureBox input.dev_measureReset{
+	margin-top: 7px;
+}
+
+/*
+ * End design tester 
+ */
+
+
+
+
+
