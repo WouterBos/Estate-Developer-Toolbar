@@ -112,7 +112,6 @@ time:before,
 mark:before {
 	display: block;
 	color: rgba(0, 0, 0, 0.7);
-	content: "Aside: ";
 }
 
 section:before {
@@ -169,7 +168,7 @@ header {
 	background: rgba(255, 114, 0, 0.2)
 }
 
-header:before {
+footer:before {
 	content: "Footer: ";
 }
 footer {
