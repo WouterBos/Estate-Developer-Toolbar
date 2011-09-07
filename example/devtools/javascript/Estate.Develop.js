@@ -601,7 +601,9 @@ Estate.Develop.Structure = ( function() {
 		Init: function(newConfig) {
 			// Update internal config
 			var error = ""
-			error = Estate.Check.LiteralUpdatable(config, newConfig);
+			if (newConfig) {
+				error = Estate.Check.LiteralUpdatable(config, newConfig);
+			}
 			if (error != "") {
 				throw new Error(error);
 			}
