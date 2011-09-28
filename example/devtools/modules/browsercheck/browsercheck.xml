@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<browsercheck>
+  <browsers>
+    <!-- This part is static and editable by the web developer -->
+    <ie7 />
+    <ie8 />
+    <ie9 />
+    <firefox3.5 />
+    <firefox4 />
+    <chrome10 />
+  </browsers>
+  <designs>
+    <!-- The code inside the "designs"-node is dynamic.-->
+    <design id="foo">
+      <checked>
+        <ie7 />
+        <ie9 />
+      </checked>
+    </design>
+    <design id="bar">
+      <checked>
+        <ie7 />
+        <chrome10 />
+      </checked>
+    </design>
+    <design id="baz">
+      <checked>
+        <ie7 />
+        <ie8 />
+        <ie9 />
+        <firefox3.5 />
+        <firefox4 />
+        <chrome10 />
+      </checked>
+    </design>    
+  </designs>
+</browsercheck>
