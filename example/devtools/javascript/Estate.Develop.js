@@ -601,13 +601,15 @@ Estate.Develop.Structure = ( function() {
 		Init: function(newConfig) {
 			// Update internal config
 			var error = ""
-			if (newConfig) {
-				error = Estate.Check.LiteralUpdatable(config, newConfig);
+			if (typeof(newConfig) == 'object' && typeof(newConfig.constructor) == 'object' && newConfig.constructor.toString().indexOf('Event') == -1) {
+				if (newConfig) {
+					error = Estate.Check.LiteralUpdatable(config, newConfig);
+				}
+				if (error != "") {
+					throw new Error(error);
+				}
+				Estate.Check.UpdateLiteral(config, newConfig)
 			}
-			if (error != "") {
-				throw new Error(error);
-			}
-			Estate.Check.UpdateLiteral(config, newConfig)
 
 			// Creates button in menu
 			button = Estate.Develop.Menu.AddMenuItem(config.buttonName)
