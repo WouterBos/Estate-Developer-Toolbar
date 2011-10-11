@@ -413,7 +413,7 @@ Estate.Develop.DesignTester = ( function() {
 					if (error != "") {
 						throw new Error(error);
 					}
-					Estate.Check.UpdateLiteral(config, newConfig)
+					Estate.Check.UpdateLiteral(config, newConfig, true)
 				}
 			}
 			offsetCurrent.x = config.xOffset
